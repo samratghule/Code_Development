@@ -35,5 +35,5 @@ int main()
    // Close the handle once we don't need it.
    CloseHandle(hFile);
    system("PAUSE");
-D:\GIT\Codeblocks\CPP_codes\winapi_file_handling\main.cpp   return 0;
+   return 0;
 }
