@@ -2,13 +2,13 @@
 #include <Windows.h>
 
 using namespace std;
-std::string filetext = "File handling";
+std::string filetext = "File handling test application for testing";
 DWORD bytesWritten;
 int main()
 {
    // Open a handle to the file
    HANDLE hFile = CreateFile(
-      "D:\\NewFile1.txt",     // Filename
+      "D:\\NewFile2.txt",     // Filename
       GENERIC_WRITE,          // Desired access
       FILE_SHARE_READ,        // Share mode
       NULL,                   // Security attributes
