@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1616563613 source:d:\git\codeblocks\c_codes\arrays crreation\array creation\main.c
+	<stdio.h>
+	<stdlib.h>
+

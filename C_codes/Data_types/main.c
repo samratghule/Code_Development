@@ -16,3 +16,13 @@ int main()
     printf("Size of long long int:  %d\n",sizeof(long long int));
     return 0;
 }
+/**
+Size of integer:        4
+Size of character:      1
+Size of float:          4
+Size of unsigned int:   4
+Size of signed int:     4
+Size of short int:      2
+Size of long int:       4
+Size of long long int:  8
+*/
