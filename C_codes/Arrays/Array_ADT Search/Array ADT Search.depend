@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1618565560 source:d:\git\codeblocks\c_codes\new folder\array adt search\main.c
+	<stdio.h>
+	"functions.h"
+
+1618565573 d:\git\codeblocks\c_codes\new folder\array adt search\functions.h
+
+1618565552 source:d:\git\codeblocks\c_codes\new folder\array adt search\functions.c
+	<stdio.h>
+	"functions.h"
+
