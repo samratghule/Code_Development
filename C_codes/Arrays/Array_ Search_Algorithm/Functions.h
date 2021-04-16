@@ -6,3 +6,5 @@ struct ArrayADT
     int length;
  };
 void display(struct ArrayADT );
+int linearsearch(struct ArrayADT, int );
+int binarysearch(struct ArrayADT,int );
