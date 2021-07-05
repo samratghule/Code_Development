@@ -3,25 +3,13 @@
 DWORD WINAPI threadFunc1(LPVOID lpParam )
 {
 
-while(count1 <10)
-	{
-		cout<<"Thread 1: "<<endl;
-		count1++;
-		Sleep(100);
-	}
-count1=0;
+
     return 0;
 }
 
 DWORD WINAPI threadFunc2(LPVOID lpParam )
 {
-while(count2 <10)
-	{
-		printf("thread2\n");
-		count2++;
-		Sleep(100);
-	}
-count2=0;
+
     return 0;
 }
 

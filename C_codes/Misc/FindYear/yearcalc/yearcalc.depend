@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1618983897 source:d:\git\codeblocks\c_codes\misc\findyear\yearcalc\main.c
+	<stdio.h>
+	<stdlib.h>
+

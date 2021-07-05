@@ -8,7 +8,7 @@ int main()
 {
    // Open a handle to the file
    HANDLE hFile = CreateFile(
-      "D:\\NewFile2.txt",     // Filename
+      "D:\\NewFile21.txt",     // Filename
       GENERIC_WRITE,          // Desired access
       FILE_SHARE_READ,        // Share mode
       NULL,                   // Security attributes

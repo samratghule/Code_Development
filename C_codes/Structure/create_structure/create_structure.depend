@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1625061020 source:d:\git\codeblocks\c_codes\structure\create\create_structure\main.c
+	<stdio.h>
+	<stdlib.h>
+
