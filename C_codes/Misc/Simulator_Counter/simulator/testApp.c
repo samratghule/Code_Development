@@ -36,8 +36,8 @@ DWORD WINAPI threadFunc1(LPVOID lpParam )
 						uint8_t recv_buf[6]={0};
 
 
-						fd = open("COM3", O_RDONLY);
-
+						//fd = open("COM3", O_RDONLY);
+						 fd = open ("COM3", O_RDWR);
 						if(fd < 0){
 							perror("open() failed");
 							_exit(1);
@@ -68,6 +68,9 @@ DWORD WINAPI threadFunc1(LPVOID lpParam )
 			  {
 				mycount[0]=recv_buf[0];
 				mycount[1]=recv_buf[1];
+
+				write(fd,recv_buf,2);
+				//write (fd, "hello!\n", 7);
 				flag=1;
 			  }
 
