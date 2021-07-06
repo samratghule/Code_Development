@@ -2,7 +2,7 @@
 #define MODEL_HPP
 
 #include <touchgfx/Utils.hpp>
-
+extern int flag;
 class ModelListener;
 
 /**

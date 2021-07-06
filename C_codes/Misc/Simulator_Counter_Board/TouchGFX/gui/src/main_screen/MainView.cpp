@@ -1,5 +1,9 @@
 #include <gui/main_screen/MainView.hpp>
 #include "BitmapDatabase.hpp"
+#ifdef SIMULATOR
+#include "windows.h"
+#endif
+uint8_t mycount[2] = { 0 };
 
 MainView::MainView()
 {
@@ -7,7 +11,7 @@ MainView::MainView()
     // is handled by showing a black box in the
     // unused part of the display.
     if (HAL::DISPLAY_WIDTH > backgroundImage.getWidth() ||
-            HAL::DISPLAY_HEIGHT > backgroundImage.getHeight())
+        HAL::DISPLAY_HEIGHT > backgroundImage.getHeight())
     {
         backgroundBox.setVisible(true);
     }
@@ -24,20 +28,27 @@ void MainView::tearDownScreen()
 
 void MainView::increaseValue()
 {
-    if (count < 42)
-    {
-        count++;
-        setCount(count);
 
-        if (count == 42)
+
+    if (mycount[0] <= mycount[1])
+    {
+
+        setCount(mycount[0]);
+
+        if (mycount[0] == mycount[1])
         {
+            setCount(mycount[1]);
             setLimitEffects(false, true);
         }
-        else if (count == 1)
+        else if (mycount[0] == 0)
         {
             setLimitEffects(true, true);
         }
+        mycount[0]++;
     }
+
+
+
 }
 
 void MainView::decreaseValue()

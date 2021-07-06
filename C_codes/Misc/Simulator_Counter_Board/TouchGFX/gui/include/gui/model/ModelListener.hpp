@@ -27,6 +27,8 @@ public:
     {
         model = m;
     }
+
+    virtual void setnewval() {}
 protected:
     Model* model;
 };

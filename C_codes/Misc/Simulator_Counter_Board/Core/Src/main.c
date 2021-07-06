@@ -26,6 +26,7 @@
 /* USER CODE BEGIN Includes */
 #include "stm32h750b_discovery_qspi.h"
 #include "stm32h750b_discovery_sdram.h"
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,6 +36,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -71,7 +73,8 @@ const osThreadAttr_t myTask02_attributes = {
   .priority = (osPriority_t) osPriorityLow,
 };
 /* USER CODE BEGIN PV */
-uint8_t receive_byte=0;
+uint8_t receive_byte[6]={0};
+ int flag,loopcount=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -89,6 +92,8 @@ void StartTask02(void *argument);
 
 /* USER CODE BEGIN PFP */
 void USART_ReceiveData();
+void test();
+extern uint8_t mycount[2];
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -626,17 +631,32 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void USART_ReceiveData()
 {
-	HAL_UART_Receive_IT(&huart3,&receive_byte,1);
+	HAL_UART_Receive_IT(&huart3,receive_byte,6);
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 
-	uint8_t data[] = "HELLO WORLD FROM GUI \r\n";
+	char *token;
+		int i =0;
+		token = strtok(receive_byte," ");
 
-			  HAL_UART_Transmit (&huart3, data, sizeof (data), 10);
-	HAL_UART_Receive_IT(&huart3,&receive_byte,1);
+
+				while(token !=NULL)
+				{
+				receive_byte[i++] = (int)strtol(token,NULL,16);
+				token=strtok(NULL," ");
+				}
+		mycount[0]=receive_byte[0];
+		mycount[1]=receive_byte[1];
+		flag=1;
+
+
+
+	HAL_UART_Receive_IT(&huart3,receive_byte,6);
 }
+
+
 
 /* USER CODE END 4 */
 
@@ -672,7 +692,9 @@ void StartTask02(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	  uint8_t data[] = "HELLO WORLD \r\n";
 
+	  HAL_UART_Transmit (&huart3, data, sizeof (data), 10);
 
     osDelay(1);
   }

@@ -6,7 +6,9 @@
 #include <touchgfx/lcd/LCD.hpp>
 #include <stdlib.h>
 #include <simulator/mainBase.hpp>
-
+#include <gui/main_screen/MainView.hpp>
+#include "BitmapDatabase.hpp"
+#include "testApp.h"
 //#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 //#define CANVAS_BUFFER_SIZE (3600)
 
@@ -47,7 +49,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     // TouchGFX Manual.
     //static uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
     //touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
-
+    testApp();
     touchgfx::HAL::getInstance()->taskEntry(); //Never returns
 
     return EXIT_SUCCESS;

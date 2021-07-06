@@ -43,8 +43,8 @@ MainViewBase::MainViewBase() :
     add(backgroundImage);
     add(counterBackgroundImage);
     add(countTxt);
-    add(buttonUp);
-    add(buttonDown);
+    //add(buttonUp);
+    //add(buttonDown);
 }
 
 void MainViewBase::setupScreen()
