@@ -11,7 +11,7 @@
 #include "testApp.h"
 //#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 //#define CANVAS_BUFFER_SIZE (3600)
-
+int simulator =1;
 using namespace touchgfx;
 
 #ifdef __linux__

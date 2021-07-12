@@ -94,6 +94,7 @@ void StartTask02(void *argument);
 void USART_ReceiveData();
 void test();
 extern uint8_t mycount[2];
+int simulator=0;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/

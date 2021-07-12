@@ -1,8 +1,6 @@
 #include <gui/main_screen/MainView.hpp>
 #include "BitmapDatabase.hpp"
-#ifdef SIMULATOR
-#include "windows.h"
-#endif
+
 uint8_t mycount[2] = { 0 };
 
 MainView::MainView()
