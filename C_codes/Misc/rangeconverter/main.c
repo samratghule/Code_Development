@@ -19,7 +19,7 @@ float volume_percent=100;
    // printf("%f",volume);
 while(time>10)
 {   printf("time: %.2f  volume %.2f volume percent:%2f\t\n",time,volume,volume_percent);
-    time=time-10;
+    time--;
     volume=((rate*time)/60);
     volume_percent = 100-(( (volume - volume_min) / (volume_max - volume_min) ) * (per_volume_max - per_volume_min) + per_volume_min);
 
