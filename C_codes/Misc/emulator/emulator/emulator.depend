@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1625825829 source:d:\git\codeblocks\c_codes\misc\new folder\emulator\main.c
-	<Windows.h>
-	<stdio.h>
-	<string.h>
-

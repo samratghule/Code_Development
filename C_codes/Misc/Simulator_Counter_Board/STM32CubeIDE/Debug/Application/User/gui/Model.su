@@ -1,2 +1,0 @@
-Model.cpp:16:1:Model::Model()	16	static
-Model.cpp:20:6:void Model::tick()	16	static

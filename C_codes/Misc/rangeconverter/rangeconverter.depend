@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1626094855 source:d:\git\codeblocks\c_codes\misc\new folder\rangeconverter\main.c
-	<stdio.h>
-	<stdlib.h>
-	<windows.h>
-
