@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1612804970 source:d:\git-master-repository\git-c_repository\codeblocks\c_codes\winapi file handling\main.cpp
-	<iostream>
-	<Windows.h>
-
-1612889615 source:d:\git\codeblocks\cpp_codes\winapi_file_handling\main.cpp
-	<iostream>
-	<Windows.h>
-
